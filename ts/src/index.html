@@ -9,5 +9,26 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    function showmore() {
+      var pontos = document.querySelector(".points");
+      var mais = document.querySelectorAll(".more");
+      var btn = document.querySelector(".btn-show-more");
+      
+      if (pontos.style.display === "none" || pontos.style.display === "") {
+        pontos.style.display = "inline";
+        mais.forEach(function(item) {
+          item.style.display = "none";
+        });
+        btn.innerHTML = "ver mais";
+      } else {
+        pontos.style.display = "none";
+        mais.forEach(function(item) {
+          item.style.display = "block";
+        });
+        btn.innerHTML = "Ver menos";
+      }
+    }
+  </script>
 </body>
 </html>
